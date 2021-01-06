@@ -6,6 +6,9 @@ const packageJson = require('../package.json')
 
 const devConfig = {
   mode: 'development',
+  output: {
+    publicPath: 'http://0.0.0.0:8081/',
+  },
   devServer: {
     port: 8081,
     historyApiFallback: {
@@ -25,9 +28,6 @@ const devConfig = {
       template: './public/index.html',
     }),
   ],
-  // output: {
-  //   publicPath: '/',
-  // },
 }
 
 module.exports = merge(commonConfig, devConfig)
